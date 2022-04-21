@@ -15,7 +15,8 @@ const BenefitsCalculatorLayout = (props) => {
   const [includeFamily, setIncludeFamily] = useState(false);
   const [employeeName, setEmployeeName] = useState("");
   const [benefitsCost, setBenefitsCost] = useState(0);
-  const [familyData, setFamilyData] = useState([{ name: "initial" }]);
+  const [payableAmount, setPayableAmount] = useState(0);
+  const [familyData, setFamilyData] = useState([{ name: "" }]);
 
   const IncludeFamily = () => {
     setIncludeFamily(!includeFamily);
@@ -49,14 +50,12 @@ const BenefitsCalculatorLayout = (props) => {
     setFamilyData([...familyData, { name: "test" }]);
   };
 
-  function CurrencyFormat() {
-    return (
-      "$" + benefitsCost.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
-    );
+  function CurrencyFormat(number) {
+    return "$" + number.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
   }
 
   const CalculateBenefitsCost = async () => {
-    //OMG is this hackey and wrong on so many levels, but newtonsoft dynamic json to object conversion was not playing nice today
+    //This hackey and wrong on so many levels, but newtonsoft dynamic json to object conversion was not playing nice today
     var delmitedStringOfNames =
       employeeName +
       "," +
@@ -76,6 +75,7 @@ const BenefitsCalculatorLayout = (props) => {
       })
       .then((myJson) => {
         setBenefitsCost(myJson.cost);
+        setPayableAmount(myJson.payableAmount);
       });
   };
 
@@ -105,14 +105,13 @@ const BenefitsCalculatorLayout = (props) => {
               {includeFamily ? ShowFamilyInfo() : null}
             </form>
           </div>
-
           <div class="col-sm">
             <div style={{ paddingTop: "35px" }}>
               <button
                 onClick={AddMoreRows}
                 type="submit"
                 class="btn btn-primary">
-                AddMoreRows
+                Add More Members
               </button>
               <div style={{ display: "inline-block", paddingLeft: "100px" }}>
                 <button
@@ -126,7 +125,8 @@ const BenefitsCalculatorLayout = (props) => {
               </div>
             </div>
             <div style={{ paddingTop: "25px" }}>
-              <h2> Total Benefits Price: {CurrencyFormat()}</h2>
+              <h2> Total cost of benefits: {CurrencyFormat(benefitsCost)}</h2>
+              <h2>Total pay: {CurrencyFormat(payableAmount)}</h2>
             </div>
           </div>
         </div>

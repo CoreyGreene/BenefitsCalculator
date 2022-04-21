@@ -19,5 +19,15 @@
             return 500;
         }
 
+        public decimal GetEmployeeSalaryPerYear()
+        {
+            return 52000;
+        }
+
+        public decimal GetEmployeePayPeriodsPerYear()
+        {
+            return 26;
+        }
+
     }
 }

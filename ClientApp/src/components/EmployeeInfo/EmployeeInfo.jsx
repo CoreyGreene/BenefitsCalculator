@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
 const EmployeeInfo = (props) => {
-  //var displayName = Home.name;
-
   const { employeeNameCallBack } = props;
   const [employeeName, setEmployeeName] = useState("");
 
@@ -35,19 +33,3 @@ const EmployeeInfo = (props) => {
   );
 };
 export default EmployeeInfo;
-
-/*
-export class Home extends Component {
-  static displayName = Home.name;
-
-    // code blow works
-    /*
-    componentDidMount() {
-        this.populateWeatherData();
-    }
-    async populateWeatherData() {
-        const response = await fetch('weatherforecast');
-        const data = await response.json();
-        this.setState({ forecasts: data, loading: false });
-    }
-    */

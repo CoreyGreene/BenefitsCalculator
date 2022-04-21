@@ -1,19 +1,16 @@
-﻿namespace BenefitsCalculator.Services
+﻿using BenefitsCalculator.Services.Discounts;
+
+namespace BenefitsCalculator.Services
 {
     public class DiscountService
     {
-
-        public DiscountService()
+        public decimal CalculateDiscounts(string name, decimal currentCost)
         {
+            DefaultDiscount defaultDiscount = new DefaultDiscount();
+            SuperSecretDiscount superSecretDiscount = new SuperSecretDiscount(defaultDiscount);
+            NameStartsWithADiscountService nameStartsWithADiscountService = new NameStartsWithADiscountService(superSecretDiscount);
 
+            return nameStartsWithADiscountService.ApplyDiscount(name, currentCost);
         }
-
-
-        public decimal CalculateDiscounts()
-        {
-            return 0;
-            // use decorator here
-        }
-
     }
 }

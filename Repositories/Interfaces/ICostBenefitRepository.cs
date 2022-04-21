@@ -4,5 +4,7 @@
     {
         decimal GetCostOfBenefitsForEmployeesPerYear();
         decimal GetCostOfBenefitsForDependentsPerYear();
+        decimal GetEmployeeSalaryPerYear();
+        decimal GetEmployeePayPeriodsPerYear();
     }
 }

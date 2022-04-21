@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cgree\\source\\repos\\BenefitsCalculatorTest\\BenefitsCalculator\\BenefitsCalculator.csproj": {}
+    "C:\\Users\\cgree\\source\\repos\\BenefitsCalculator\\BenefitsCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cgree\\source\\repos\\BenefitsCalculatorTest\\BenefitsCalculator\\BenefitsCalculator.csproj": {
+    "C:\\Users\\cgree\\source\\repos\\BenefitsCalculator\\BenefitsCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cgree\\source\\repos\\BenefitsCalculatorTest\\BenefitsCalculator\\BenefitsCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\cgree\\source\\repos\\BenefitsCalculator\\BenefitsCalculator.csproj",
         "projectName": "BenefitsCalculator",
-        "projectPath": "C:\\Users\\cgree\\source\\repos\\BenefitsCalculatorTest\\BenefitsCalculator\\BenefitsCalculator.csproj",
+        "projectPath": "C:\\Users\\cgree\\source\\repos\\BenefitsCalculator\\BenefitsCalculator.csproj",
         "packagesPath": "C:\\Users\\cgree\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cgree\\source\\repos\\BenefitsCalculatorTest\\BenefitsCalculator\\obj\\",
+        "outputPath": "C:\\Users\\cgree\\source\\repos\\BenefitsCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cgree\\AppData\\Roaming\\NuGet\\NuGet.Config",
