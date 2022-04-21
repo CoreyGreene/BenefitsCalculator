@@ -36,7 +36,7 @@ namespace BenefitsCalculator.Services
             List<string> newList = new List<string>();
             nameList.ForEach(name =>
             {
-                if (!name.Equals(String.Empty))
+                if (!name.Trim().Equals(String.Empty))
                 {
                     newList.Add(name);
                 }
