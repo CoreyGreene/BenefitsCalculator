@@ -16,7 +16,7 @@ const BenefitsCalculatorLayout = (props) => {
   const [employeeName, setEmployeeName] = useState("");
   const [benefitsCost, setBenefitsCost] = useState(0);
   const [payableAmount, setPayableAmount] = useState(0);
-  const [familyData, setFamilyData] = useState([{ name: "" }]);
+  const [beneficiaryData, setBeneficiaryData] = useState([{ name: "" }]);
 
   const IncludeFamily = () => {
     setIncludeFamily(!includeFamily);
@@ -26,7 +26,7 @@ const BenefitsCalculatorLayout = (props) => {
     return (
       <div>
         <ul>
-          {familyData.map((r) => (
+          {beneficiaryData.map((beneficiary) => (
             <li>
               <div style={inputStyle}>
                 <input
@@ -34,7 +34,7 @@ const BenefitsCalculatorLayout = (props) => {
                   class="form-control"
                   id="employeeName"
                   onChange={(e) => {
-                    r.name = e.target.value;
+                    beneficiary.name = e.target.value;
                   }}
                   aria-describedby="emailHelp"
                   placeholder="Enter Name"></input>
@@ -47,7 +47,7 @@ const BenefitsCalculatorLayout = (props) => {
   };
 
   const AddMoreRows = () => {
-    setFamilyData([...familyData, { name: "test" }]);
+    setBeneficiaryData([...beneficiaryData, { name: "test" }]);
   };
 
   function CurrencyFormat(number) {
@@ -59,7 +59,7 @@ const BenefitsCalculatorLayout = (props) => {
     var delmitedStringOfNames =
       employeeName +
       "," +
-      familyData
+      beneficiaryData
         .map(function (val) {
           return val.name;
         })
@@ -117,7 +117,7 @@ const BenefitsCalculatorLayout = (props) => {
                 <button
                   type="submit"
                   onClick={() => CalculateBenefitsCost()}
-                  disabled={employeeName == ""}
+                  disabled={employeeName === ""}
                   class="btn btn-primary"
                   style={{ alight: "right" }}>
                   Calculate
