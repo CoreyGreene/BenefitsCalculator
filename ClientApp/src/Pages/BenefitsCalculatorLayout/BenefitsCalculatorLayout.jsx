@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { EmployeeInfo } from "../../components/EmployeeInfo";
+import { Counter } from "../../Redux/features/counter/counter";
 
 const BenefitsCalculatorLayout = (props) => {
   const generalPadding = {
@@ -131,6 +132,8 @@ const BenefitsCalculatorLayout = (props) => {
           </div>
         </div>
       </div>
+
+      <Counter />
     </div>
   );
 };

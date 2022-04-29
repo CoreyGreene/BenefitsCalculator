@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 const EmployeeInfo = (props) => {
   const { employeeNameCallBack } = props;
-  const [employeeName, setEmployeeName] = useState("");
+    const [employeeName, setEmployeeName] = useState("");
+    const count = useSelector((state) => state.counter.value);
 
   const style = {
     paddingTop: "10px",
@@ -28,7 +30,13 @@ const EmployeeInfo = (props) => {
           aria-describedby="emailHelp"
           placeholder="Full Name"
           onChange={(e) => verifyValueEntered(e)}></input>
-      </div>
+          </div>
+
+
+          <div>
+              testing redux counter:
+              <span>{count}</span>
+              </div>
     </div>
   );
 };

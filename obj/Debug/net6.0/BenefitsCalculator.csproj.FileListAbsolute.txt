@@ -26,3 +26,5 @@ C:\Users\cgree\source\repos\BenefitsCalculator\obj\Debug\net6.0\BenefitsCalculat
 C:\Users\cgree\source\repos\BenefitsCalculator\obj\Debug\net6.0\BenefitsCalculator.genruntimeconfig.cache
 C:\Users\cgree\source\repos\BenefitsCalculator\obj\Debug\net6.0\ref\BenefitsCalculator.dll
 C:\Users\cgree\source\repos\BenefitsCalculator\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\cgree\source\repos\BenefitsCalculator\bin\Debug\net6.0\package-lock.json
+C:\Users\cgree\source\repos\BenefitsCalculator\bin\Debug\net6.0\package.json

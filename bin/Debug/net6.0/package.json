@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@reduxjs/toolkit": "*",
+    "react-redux": "npm:null@*"
+  }
+}
